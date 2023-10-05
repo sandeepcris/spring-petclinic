@@ -30,13 +30,3 @@ class WelcomeController {
 	}
 
 }
-
-@RestController
-@RequestMapping("/v1/hello")
-public class HelloRestController {
-
-    @GetMapping
-    public String sayHello(){
-        return "Hello World and Sandeep & CRIS!!!";
-    }
-}
