@@ -18,6 +18,8 @@ package org.springframework.samples.petclinic.system;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 @Controller
 class WelcomeController {
@@ -27,4 +29,14 @@ class WelcomeController {
 		return "welcome";
 	}
 
+}
+
+@RestController
+@RequestMapping("/v1/hello")
+public class HelloRestController {
+
+    @GetMapping
+    public String sayHello(){
+        return "Hello World and Sandeep & CRIS!!!";
+    }
 }
